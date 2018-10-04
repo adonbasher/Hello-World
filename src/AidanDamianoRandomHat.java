@@ -26,11 +26,9 @@ public class AidanDamianoRandomHat {
         match[1] = "0";
 
         for (int x = 1; x <= teamNumb; x++) {
-            System.out.println("here!");
             run = true;
-            w = (int) Math.random() * teamNumb;
+            w = (int) (Math.random() * teamNumb);
             while (run) {
-                System.out.println("here!");
 
                 if (teams[w].equals("0")) {
                     run = true;
