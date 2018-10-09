@@ -5,6 +5,10 @@ public class AidanDamianoRandomHat {
         Scanner console = new Scanner(System.in);
         System.out.print("How many teams? ");
         int teamNumb = console.nextInt();
+        while ((teamNumb/2) * 2 != teamNumb) {
+            System.out.print("Please choose an even number: ");
+            teamNumb = console.nextInt();
+        }
         String[] teams = new String[teamNumb];
         fillArray(teams, teamNumb);
     }
@@ -25,10 +29,10 @@ public class AidanDamianoRandomHat {
         match[0] = "0";
         match[1] = "0";
 
-        for (int x = 1; x <= teamNumb; x++) {
+        for (int x = 1; x <= teamNumb/2; x++) {
             run = true;
-            w = (int) (Math.random() * teamNumb);
             while (run) {
+                w = (int) (Math.random() * teamNumb);
 
                 if (teams[w].equals("0")) {
                     run = true;
@@ -45,7 +49,7 @@ public class AidanDamianoRandomHat {
                             match[0] = teams[w];
                             teams[w] = "0";
 
-                        } else {
+                        } else if (match[1].equals("0")){
                             match[1] = teams[w];
                             teams[w] = "0";
 
