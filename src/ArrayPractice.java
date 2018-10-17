@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 public class ArrayPractice {
     public static void main(String[] args) {
+        int x = 111222333;
+
+
         randomArray();
 
     }
@@ -15,4 +18,5 @@ public class ArrayPractice {
         System.out.println(Arrays.toString(aidan));
 
     }
+
 }
